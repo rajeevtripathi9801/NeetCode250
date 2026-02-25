@@ -1,5 +1,25 @@
 from typing import List 
 
+# Time Complexity - O(N^4)
+# Space Complexity - O(M) where M is number of quad available in the list 
+
+class Solution:
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+        n = len(nums)
+        nums.sort()
+        res = set()
+
+        for counter1 in range(0, n):
+            for counter2 in range(counter1 + 1, n):
+                for counter3 in range(counter2 + 1, n):
+                    for counter4 in range(counter3 + 1, n):
+                        if nums[counter1] + nums[counter2] + nums[counter3] + nums[counter4] == target:
+                            res.add((nums[counter1], nums[counter2], nums[counter3], nums[counter4]))
+
+        return list(res)
+
+# Time Complexity - O(N^3)
+# Space Complexity - O    
 class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         
