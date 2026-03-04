@@ -15,3 +15,10 @@ class Solution:
                     result = max(result, current2 - current1 + 1)
 
         return result
+
+if __name__ == "__main__":
+    s = "ABABABAB"
+    k = 2
+    solution = Solution()
+    res = solution.characterReplacement(s, k)
+    print(res)
