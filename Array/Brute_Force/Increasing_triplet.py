@@ -2,16 +2,6 @@ from typing import List
 
 class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
-        size = len(nums) 
-        for counter1 in range(0, size - 2):
-            for counter2 in range(counter1 + 1, size - 1):
-                for counter3 in range(counter2 + 1, size): 
-                    if nums[counter1] < nums[counter2] < nums[counter3]:
-                        return True 
-        return False
-
-class Solution:
-    def increasingTriplet(self, nums: List[int]) -> bool:
         first = float('inf')
         second = float('inf')
         for num in nums:

@@ -49,6 +49,9 @@ class Solution:
                         right_pointer -= 1
 
         return sol
+
+class Solution:
+
     
 if __name__=="__main__":
     sol = Solution()
